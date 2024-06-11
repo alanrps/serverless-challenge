@@ -15,7 +15,7 @@ app.get("/employee/:id", async (req, res) => {
 
     const params = new GetCommand({
         TableName: 'employee-prd',
-        Key: { id: Number(id) }
+        Key: { id: id }
     });
 
     try {
@@ -83,6 +83,7 @@ app.patch("/employee/:id", async (req, res) => {
 
 app.post("/employee", async (req, res) => {
     const body = req.body;
+    console.log(body);
     const params = new PutCommand({
         TableName: 'employee-prd',
         Item: body
@@ -101,7 +102,6 @@ app.post("/employee", async (req, res) => {
         res.status(500).json({ error: "Error to create employee" });
     }
 })
-
 
 
 export const handler = serverless(app);

@@ -1,20 +1,24 @@
-org: challenges
+org: stefanini
 app: serverless-challenge
 service: serverless-challenge
-frameworkVersion: "4"
+frameworkVersion: "3"
 
 plugins:
   - serverless-offline
+  - serverless-plugin-typescript
 
 custom:
   tableName: "employee-${sls:stage}"
+  serverless-plugin-typescript:
+    tsconfig: ./tsconfig.json
+    outDir: ./dist
   esbuild:
     bundle: true
     minify: false
 
 provider:
   name: aws
-  runtime: nodejs20.x
+  runtime: nodejs18.x
   iam:
     role:
       statements:
@@ -33,7 +37,7 @@ provider:
 
 functions:
   api:
-    handler: handler.handler
+    handler: src/handler.handler
     events:
       - httpApi: "*"
 

@@ -13,7 +13,7 @@ O desafio consiste em desenvolver uma solução para uma vaga na Stefanini, em p
 5. As informações devem ser armazenadas em um banco de dados, relacional ou não relacional, hospedado em uma infraestrutura AWS.
 6. A Lambda deve ser capaz de consultar, deletar e atualizar um funcionário, e a API deve ser acessível via internet.
 7. Os recursos podem ser provisionados utilizando Serverless Framework ou Terraform.
-8. Realizar testes unitários utilizando Jest.
+8. Realizar testes unitários utilizando Jest. 
 
 ## Como Executar
 
@@ -37,6 +37,14 @@ serverless deploy --stage prd
 ```
 
 Certifique-se de ter as permissões necessárias e que sua conta AWS esteja corretamente configurada para implantar os recursos especificados no Serverless Framework.
+
+### Endpoint
+
+Para testar o desafio, realizei o deploy na aws visando facilitar o processo de teste, o endpoint é: https://nxnghockli.execute-api.us-east-1.amazonaws.com
+
+## Melhorias
+
+Uma maneira de aumentar ainda mais a confiabilidade do código seria incluir testes de unidade que abranjam todo o código, além de adicionar testes de integração. Embora não tenha sido possível desenvolvê-los devido a restrições de tempo, também seria benéfico considerar a inclusão de uma biblioteca para facilitar a criação de documentação de forma mais dinâmica.
 
 ## Repositório desafio
 

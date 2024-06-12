@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este projeto foi desenvolvido utilizando TypeScript, serverless framework e express como framework web, seguindo os princípios da arquitetura limpa. O objetivo é criar uma API RESTful para gerenciar funcionários. O Jest foi utilizado para desenvolver os testes unitários.
+Este projeto foi desenvolvido utilizando TypeScript, serverless framework e express como framework web, seguindo os princípios da arquitetura limpa. O objetivo é criar uma API RESTful para gerenciar funcionários. O Jest foi utilizado para desenvolver os testes unitários e a documentação foi feita em markdown.
 
 O desafio consiste em desenvolver uma solução para uma vaga na Stefanini, em parceria com o cliente Raízen, seguindo os seguintes passos:
 
@@ -36,11 +36,18 @@ Execute o comando para implantar na AWS e testar:
 serverless deploy --stage prd
 ```
 
+
 Certifique-se de ter as permissões necessárias e que sua conta AWS esteja corretamente configurada para implantar os recursos especificados no Serverless Framework.
 
 ### Endpoint
 
 Para testar o desafio, realizei o deploy na aws visando facilitar o processo de teste, o endpoint é: https://nxnghockli.execute-api.us-east-1.amazonaws.com
+
+### Execução dos testes
+
+```
+npm run test
+```
 
 ## Melhorias
 

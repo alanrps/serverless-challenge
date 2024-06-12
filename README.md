@@ -36,7 +36,6 @@ Execute o comando para implantar na AWS e testar:
 serverless deploy --stage prd
 ```
 
-
 Certifique-se de ter as permissões necessárias e que sua conta AWS esteja corretamente configurada para implantar os recursos especificados no Serverless Framework.
 
 ### Endpoint
@@ -52,6 +51,8 @@ npm run test
 ## Melhorias
 
 Uma maneira de aumentar ainda mais a confiabilidade do código seria incluir testes de unidade que abranjam todo o código, além de adicionar testes de integração. Embora não tenha sido possível desenvolvê-los devido a restrições de tempo, também seria benéfico considerar a inclusão de uma biblioteca para facilitar a criação de documentação de forma mais dinâmica.
+
+Além disso, poderia-se melhorar a forma de tratar o ID, usando UUID ou alguma forma de gerenciar os IDs de forma incremental.
 
 ## Repositório desafio
 
